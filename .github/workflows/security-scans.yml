@@ -1,4 +1,4 @@
-name: Security Scanning Workflow
+name: Security Scanning workflow
 on:
   push:
     branches:
@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 21
-          distribution: 'zulu'
+          distribution: "zulu"
       - name: SonarQube Analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -46,4 +46,4 @@ jobs:
       - name: OWASP ZAP Scan
         uses: zaproxy/action-baseline@v0.14.0
         with:
-          target: 'https://www.zaproxy.org'
+          target: "https://www.zaproxy.org"
