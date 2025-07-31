@@ -1,6 +1,6 @@
 name: Security Scanning Workflow
-on:
-  push:
+on: push
+  #push:
     #branches:
     #  - main
 
